@@ -1,0 +1,127 @@
+$SIZE: 100px;
+$ANGLE: 33.69deg;
+$RED: #C60C30;
+$BLUE: #003478;
+
+body
+{
+	margin: 0;
+}
+
+*
+{
+	position: absolute;
+}
+
+#flag
+{
+	width:  3 * $SIZE;
+	height: 2 * $SIZE;
+}
+	table
+	{
+		width: (1/2) * $SIZE;
+		border-collapse: collapse;
+	}
+
+	tr, td
+	{
+		position: static !important;
+		width: (1/2) * $SIZE;
+		height: (1/12) * $SIZE;
+		//padding: 15px;
+		border: $SIZE * (1/24) solid white;
+		background-color: black;
+	}
+
+		@mixin rotate($angle)
+		{
+			transform: rotate($angle);
+			-ms-transform: rotate($angle);
+			-webkit-transform: rotate($angle);
+		}
+
+		#geon
+		{
+			//@include rotate($ANGLE * -1)
+		}
+
+		#ri
+		{
+			//@include rotate($ANGLE)
+		}
+
+		#gam
+		{
+			//@include rotate($ANGLE)
+		}
+
+		#gon
+		{
+			//@include rotate($ANGLE * -1)
+		}
+
+		#taeguk
+		{
+			top: $SIZE * (2/2) - $SIZE/2;
+			left: $SIZE * (3/2) - $SIZE/2;
+		}
+				.line
+				{
+					width:  (1/2)  * $SIZE;
+					height: (1/12) * $SIZE;
+					background-color: black;
+				}
+
+				.line_gap
+				{
+					width:  (1/24)  * $SIZE;
+					height: (1/12) * $SIZE;
+					background-color: white;
+				}
+
+	.taeguk_half
+	{
+		width:  $SIZE;
+		height:  (1/2)  * $SIZE;
+
+		&.yang
+		{
+			border-radius: $SIZE $SIZE 0 0;
+		}
+
+		&.yin
+		{
+			border-radius: 0 0 $SIZE $SIZE;
+			top: $SIZE/2;
+		}
+	}
+		.taeguk_inner
+		{
+			border-radius: 50%;
+			width:  (1/2)  * $SIZE;
+			height:  (1/2)  * $SIZE;
+			top: ($SIZE/2) - (1/4) * $SIZE;
+			z-index: 1;
+
+			&.yang
+			{
+				background-color: $RED;
+			}
+
+			&.yin
+			{
+				left: (1/2)  * $SIZE;
+				background-color: $BLUE;
+			}
+		}
+
+	.yang
+	{
+		background-color: $RED;
+	}
+
+	.yin
+	{
+		background-color: $BLUE;
+	}
