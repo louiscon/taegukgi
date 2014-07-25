@@ -1,38 +1,39 @@
 !!!
 %html
 	%head
-		%link{:rel => :stylesheet, :type => :"text/css", :href => "style.css"}
+		%title Taegukgi CSS
+		%link{:rel => :stylesheet, :type => :"text/css", :href => 'style.css'}
 
-%body
-	#flag
-		#geon.trigram
-			.line.one
-			.line.two
-			.line.three
-		#ri.trigram
-			.line.one
-			.line.two
-				.line_gap
-			.line.three
-		#gam.trigram
-			.line.one
-				.line_gap
-			.line.two
-			.line.three
-				.line_gap
-		#gon.trigram
-			.line.one
-				.line_gap
-			.line.two
-				.line_gap
-			.line.three
-				.line_gap
-		#taeguk
-			.taeguk_half.yang
-			.taeguk_inner.yang
-			.taeguk_half.yin
-			.taeguk_inner.yin
+	%body
+		#flag
+			#geon.trigram
+				.line.one
+				.line.two
+				.line.three
+			#ri.trigram
+				.line.one
+				.line.two
+					.line_gap
+				.line.three
+			#gam.trigram
+				.line.one
+					.line_gap
+				.line.two
+				.line.three
+					.line_gap
+			#gon.trigram
+				.line.one
+					.line_gap
+				.line.two
+					.line_gap
+				.line.three
+					.line_gap
+			#taeguk
+				.taeguk_half.yang
+				.taeguk_inner.yang
+				.taeguk_half.yin
+				.taeguk_inner.yin
 
-#github
-	%a{href: "'https://github.com/marunouchi/taegukgi'"}
-		%img{src: "img/github.png"}
+		%a{href: 'https://github.com/marunouchi/taegukgi'}
+			%img{id: 'github', src: 'img/github.png', alt: 'GitHub'}
+

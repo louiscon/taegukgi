@@ -1,17 +1,21 @@
 $SIZE: 300px;
-$ANGLE: 56.30993247402021308647450543834deg;
-$OFFSET: 70px;
+$ANGLE: 56.30993247402021308647450543834deg; //Hardcoded because SASS doesn't have trigonometric functions...
+$TRIGRAM_OFFSET: $SIZE * 0.3;
 $RED: #C60C30;
 $BLUE: #003478;
 
 body
 {
-	position: static !important;
 	margin: 0;
-	text-align: center;
+	text-align: right;
 }
 
-*
+#github
+{
+	margin: 30px;
+}
+
+div
 {
 	position: absolute;
 }
@@ -22,26 +26,23 @@ body
 	top: 50%;
 	left: 50%;
 	margin-top: -$SIZE;
-	margin-left: (3/2) * -$SIZE;
-
-	width:  3 * $SIZE;
-	height: 2 * $SIZE;
-
-	-webkit-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
-	-moz-box-shadow:    0px 0px 3px 0px rgba(0, 0, 0, 0.75);
-	box-shadow:         0px 0px 3px 0px rgba(0, 0, 0, 0.75);
+	margin-left: $SIZE * -(3/2);
+	width:  $SIZE * 3;
+	height: $SIZE * 2;
+	border: 1px solid;
 }
 
 	.trigram
 	{
-		height: (1/3) * $SIZE;
+		height: $SIZE * (1/3);
 	}
 
 		.line
 		{
 			position: relative;
-			width: (1/2) * $SIZE;
-			height: (1/12) * $SIZE;
+			width: $SIZE * (1/2);
+			height: $SIZE * (1/12);
+			overflow: visible;
 			background-color: black;
 
 			&.two
@@ -56,9 +57,10 @@ body
 
 			.line_gap
 			{
-				position: static;
+				position: relative;
+				top: -$SIZE / 200;
 				width: $SIZE * (1/24);
-				height: 100%;
+				height: $SIZE * (1/12) + $SIZE/100;
 				margin: 0 auto;
 				background-color: white;
 			}
@@ -75,56 +77,59 @@ body
 
 		#geon
 		{
-			@include rotate($ANGLE * -1);
-			top: $OFFSET;
-			left: $OFFSET;
+			@include rotate(-$ANGLE);
+			top: $TRIGRAM_OFFSET;
+			left: $TRIGRAM_OFFSET;
 		}
 
 		#ri
 		{
 			@include rotate($ANGLE);
-			bottom: $OFFSET;
-			left: $OFFSET;
+			bottom: $TRIGRAM_OFFSET;
+			left: $TRIGRAM_OFFSET;
 		}
 
 		#gam
 		{
 			@include rotate($ANGLE);
-			top: $OFFSET;
-			right: $OFFSET;
+			top: $TRIGRAM_OFFSET;
+			right: $TRIGRAM_OFFSET;
 		}
 
 		#gon
 		{
-			@include rotate($ANGLE * -1);
+			@include rotate(-$ANGLE);
 
-			bottom: $OFFSET;
-			right: $OFFSET;
+			bottom: $TRIGRAM_OFFSET;
+			right: $TRIGRAM_OFFSET;
 		}
 
 		#taeguk
 		{
 			top: $SIZE * (2/2) - $SIZE/2;
 			left: $SIZE * (3/2) - $SIZE/2;
+			width: $SIZE;
+			height: $SIZE;
+			@include rotate(90deg - $ANGLE);
 		}
 				.line
 				{
-					width:  (1/2)  * $SIZE;
-					height: (1/12) * $SIZE;
+					width: $SIZE * (1/2);
+					height: $SIZE * (1/12);
 					background-color: black;
 				}
 
 				.line_gap
 				{
-					width:  (1/24)  * $SIZE;
-					height: (1/12) * $SIZE;
+					width: $SIZE * (1/24);
+					height: $SIZE * (1/12);
 					background-color: white;
 				}
 
 	.taeguk_half
 	{
 		width:  $SIZE;
-		height:  (1/2)  * $SIZE;
+		height: $SIZE * (1/2);
 
 		&.yang
 		{
@@ -140,9 +145,9 @@ body
 		.taeguk_inner
 		{
 			border-radius: 50%;
-			width:  (1/2)  * $SIZE;
-			height:  (1/2)  * $SIZE;
-			top: ($SIZE/2) - (1/4) * $SIZE;
+			width:  $SIZE * (1/2);
+			height: $SIZE * (1/2);
+			top: ($SIZE/2) - $SIZE * (1/4);
 			z-index: 1;
 
 			&.yang
@@ -152,7 +157,7 @@ body
 
 			&.yin
 			{
-				left: (1/2)  * $SIZE;
+				left: $SIZE * (1/2);
 				background-color: $BLUE;
 			}
 		}
@@ -166,8 +171,3 @@ body
 	{
 		background-color: $BLUE;
 	}
-
-#github
-{
-	margin: 40px;
-}
