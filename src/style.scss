@@ -1,6 +1,7 @@
 $SIZE: 300px;
 $ANGLE: 56.30993247402021308647450543834deg; //Hardcoded because SASS doesn't have trigonometric functions...
-$TRIGRAM_OFFSET: $SIZE * 0.3;
+$TRIGRAM_OFFSET_X: $SIZE * 0.45;
+$TRIGRAM_OFFSET_Y: $SIZE * 0.35;
 $RED: #C60C30;
 $BLUE: #003478;
 
@@ -78,30 +79,30 @@ div
 		#geon
 		{
 			@include rotate(-$ANGLE);
-			top: $TRIGRAM_OFFSET;
-			left: $TRIGRAM_OFFSET;
+			top: $TRIGRAM_OFFSET_Y;
+			left: $TRIGRAM_OFFSET_X;
 		}
 
 		#ri
 		{
 			@include rotate($ANGLE);
-			bottom: $TRIGRAM_OFFSET;
-			left: $TRIGRAM_OFFSET;
+			bottom: $TRIGRAM_OFFSET_Y;
+			left: $TRIGRAM_OFFSET_X;
 		}
 
 		#gam
 		{
 			@include rotate($ANGLE);
-			top: $TRIGRAM_OFFSET;
-			right: $TRIGRAM_OFFSET;
+			top: $TRIGRAM_OFFSET_Y;
+			right: $TRIGRAM_OFFSET_X;
 		}
 
 		#gon
 		{
 			@include rotate(-$ANGLE);
 
-			bottom: $TRIGRAM_OFFSET;
-			right: $TRIGRAM_OFFSET;
+			bottom: $TRIGRAM_OFFSET_Y;
+			right: $TRIGRAM_OFFSET_X;
 		}
 
 		#taeguk

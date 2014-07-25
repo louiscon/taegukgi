@@ -43,29 +43,29 @@ div {
   transform: rotate(-56.30993deg);
   -ms-transform: rotate(-56.30993deg);
   -webkit-transform: rotate(-56.30993deg);
-  top: 90px;
-  left: 90px; }
+  top: 105px;
+  left: 135px; }
 
 #ri {
   transform: rotate(56.30993deg);
   -ms-transform: rotate(56.30993deg);
   -webkit-transform: rotate(56.30993deg);
-  bottom: 90px;
-  left: 90px; }
+  bottom: 105px;
+  left: 135px; }
 
 #gam {
   transform: rotate(56.30993deg);
   -ms-transform: rotate(56.30993deg);
   -webkit-transform: rotate(56.30993deg);
-  top: 90px;
-  right: 90px; }
+  top: 105px;
+  right: 135px; }
 
 #gon {
   transform: rotate(-56.30993deg);
   -ms-transform: rotate(-56.30993deg);
   -webkit-transform: rotate(-56.30993deg);
-  bottom: 90px;
-  right: 90px; }
+  bottom: 105px;
+  right: 135px; }
 
 #taeguk {
   top: 150px;
