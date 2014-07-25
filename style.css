@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+  text-align: right; }
+
+#github {
+  margin: 30px; }
+
+div {
+  position: absolute; }
+
+#flag {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -300px;
+  margin-left: -450px;
+  width: 900px;
+  height: 600px;
+  border: 1px solid; }
+
+.trigram {
+  height: 100px; }
+
+.line {
+  position: relative;
+  width: 150px;
+  height: 25px;
+  overflow: visible;
+  background-color: black; }
+  .line.two {
+    top: 12.5px; }
+  .line.three {
+    top: 25px; }
+  .line .line_gap {
+    position: relative;
+    top: -1.5px;
+    width: 12.5px;
+    height: 28px;
+    margin: 0 auto;
+    background-color: white; }
+
+#geon {
+  transform: rotate(-56.30993deg);
+  -ms-transform: rotate(-56.30993deg);
+  -webkit-transform: rotate(-56.30993deg);
+  top: 90px;
+  left: 90px; }
+
+#ri {
+  transform: rotate(56.30993deg);
+  -ms-transform: rotate(56.30993deg);
+  -webkit-transform: rotate(56.30993deg);
+  bottom: 90px;
+  left: 90px; }
+
+#gam {
+  transform: rotate(56.30993deg);
+  -ms-transform: rotate(56.30993deg);
+  -webkit-transform: rotate(56.30993deg);
+  top: 90px;
+  right: 90px; }
+
+#gon {
+  transform: rotate(-56.30993deg);
+  -ms-transform: rotate(-56.30993deg);
+  -webkit-transform: rotate(-56.30993deg);
+  bottom: 90px;
+  right: 90px; }
+
+#taeguk {
+  top: 150px;
+  left: 300px;
+  width: 300px;
+  height: 300px;
+  transform: rotate(33.69007deg);
+  -ms-transform: rotate(33.69007deg);
+  -webkit-transform: rotate(33.69007deg); }
+
+.line {
+  width: 150px;
+  height: 25px;
+  background-color: black; }
+
+.line_gap {
+  width: 12.5px;
+  height: 25px;
+  background-color: white; }
+
+.taeguk_half {
+  width: 300px;
+  height: 150px; }
+  .taeguk_half.yang {
+    border-radius: 300px 300px 0 0; }
+  .taeguk_half.yin {
+    border-radius: 0 0 300px 300px;
+    top: 150px; }
+
+.taeguk_inner {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  top: 75px;
+  z-index: 1; }
+  .taeguk_inner.yang {
+    background-color: #c60c30; }
+  .taeguk_inner.yin {
+    left: 150px;
+    background-color: #003478; }
+
+.yang {
+  background-color: #c60c30; }
+
+.yin {
+  background-color: #003478; }
