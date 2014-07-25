@@ -9,11 +9,11 @@ div {
   position: absolute; }
 
 #flag {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  margin-top: -300px;
-  margin-left: -450px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
   width: 900px;
   height: 600px;
   border: 1px solid; }

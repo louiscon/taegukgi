@@ -22,11 +22,11 @@ div
 
 #flag
 {
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	margin-top: -$SIZE;
-	margin-left: $SIZE * -(3/2);
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
 	width:  $SIZE * 3;
 	height: $SIZE * 2;
 	border: 1px solid;
